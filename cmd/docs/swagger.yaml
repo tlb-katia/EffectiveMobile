@@ -1,0 +1,12 @@
+basePath: /
+host: localhost:8080
+info:
+  contact:
+    email: tlb-kei7@yandex.ru
+    name: Katja K
+    url: https://github.com/tlb-katia
+  description: This is a simple REST Api to manage a list of songs
+  title: Effective Mobile Project
+  version: "1.0"
+paths: {}
+swagger: "2.0"

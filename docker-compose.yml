@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  postgres:
+    container_name: effectiveMode_db
+    image: postgres:14.3-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=newuser
+      - POSTGRES_PASSWORD=passwordd
+      - POSTGRES_DB=song_list
+    restart: always
+    volumes:
+      - ./internal/storage/postgres/pgdata:/var/lib/postgresql/data
+      - ./internal/storage/postgres/database.sql://docker-entrypoint-initdb.d/database.sql
+
+  effective_mobile:
+    container_name: EffectiveMobile
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    env_file: .env
+

@@ -1,0 +1,16 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a simple REST Api to manage a list of songs",
+        "title": "Effective Mobile Project",
+        "contact": {
+            "name": "Katja K",
+            "url": "https://github.com/tlb-katia",
+            "email": "tlb-kei7@yandex.ru"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "paths": {}
+}
